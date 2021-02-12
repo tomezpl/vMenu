@@ -447,7 +447,7 @@ namespace vMenuClient
                     MenuController.MainMenu = Menu;
 
                     MenuController.AddSubmenu(Menu, PlayerSubmenu);
-                    MenuController.AddSubmenu(Menu, VehicleSubmenu);
+                    //MenuController.AddSubmenu(Menu, VehicleSubmenu);
                     MenuController.AddSubmenu(Menu, WorldSubmenu);
 
                     // Create all (sub)menus.
@@ -637,7 +637,7 @@ namespace vMenuClient
             MenuItem vehicleSubmenuBtn = new MenuItem("Vehicle Related Options", "Open this submenu for vehicle related subcategories.") { Label = "→→→" };
             Menu.AddMenuItem(vehicleSubmenuBtn);
             // Add the vehicle options Menu.
-            if (IsAllowed(Permission.VOMenu))
+            if (false && IsAllowed(Permission.VOMenu))
             {
                 VehicleOptionsMenu = new VehicleOptions();
                 Menu menu = VehicleOptionsMenu.GetMenu();
@@ -649,7 +649,7 @@ namespace vMenuClient
             }
 
             // Add the vehicle spawner menu.
-            if (IsAllowed(Permission.VSMenu))
+            if (false && IsAllowed(Permission.VSMenu))
             {
                 VehicleSpawnerMenu = new VehicleSpawner();
                 Menu menu = VehicleSpawnerMenu.GetMenu();
@@ -661,7 +661,7 @@ namespace vMenuClient
             }
 
             // Add Saved Vehicles menu.
-            if (IsAllowed(Permission.SVMenu))
+            if (false && IsAllowed(Permission.SVMenu))
             {
                 SavedVehiclesMenu = new SavedVehicles();
                 Menu menu = SavedVehiclesMenu.GetMenu();
@@ -680,7 +680,7 @@ namespace vMenuClient
             }
 
             // Add the Personal Vehicle menu.
-            if (IsAllowed(Permission.PVMenu))
+            if (false && IsAllowed(Permission.PVMenu))
             {
                 PersonalVehicleMenu = new PersonalVehicle();
                 Menu menu = PersonalVehicleMenu.GetMenu();
@@ -741,7 +741,7 @@ namespace vMenuClient
             }
 
             // Add the weapons menu.
-            if (IsAllowed(Permission.WPMenu))
+            if (false && IsAllowed(Permission.WPMenu))
             {
                 WeaponOptionsMenu = new WeaponOptions();
                 Menu menu = WeaponOptionsMenu.GetMenu();
@@ -753,7 +753,7 @@ namespace vMenuClient
             }
 
             // Add Weapon Loadouts menu.
-            if (IsAllowed(Permission.WLMenu))
+            if (false && IsAllowed(Permission.WLMenu))
             {
                 WeaponLoadoutsMenu = new WeaponLoadouts();
                 Menu menu = WeaponLoadoutsMenu.GetMenu();

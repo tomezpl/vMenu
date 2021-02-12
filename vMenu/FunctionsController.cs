@@ -85,8 +85,10 @@ namespace vMenuClient
             Tick += DeathNotifications;
             Tick += UpdateLocation;
             Tick += ManageCamera;
+            /*
             Tick += PlayerBlipsControl;
             Tick += PlayerOverheadNamesControl;
+            */
             Tick += RestorePlayerAfterBeingDead;
             Tick += PlayerClothingAnimationsController;
             Tick += AnimationsAndInteractions;
@@ -262,7 +264,7 @@ namespace vMenuClient
         private async Task VehicleOptions()
         {
             // Vehicle options. Only run vehicle options if the vehicle options menu has actually been created.
-            if (MainMenu.PermissionsSetupComplete && MainMenu.VehicleOptionsMenu != null && IsAllowed(Permission.VOMenu))
+            if (false && MainMenu.PermissionsSetupComplete && MainMenu.VehicleOptionsMenu != null && IsAllowed(Permission.VOMenu))
             {
                 // When the player is in a valid vehicle:
                 if (IsPedInAnyVehicle(Game.PlayerPed.Handle, true))
@@ -964,7 +966,7 @@ namespace vMenuClient
                     }
                 }
 
-                if (GetProfileSetting(221) == 1) // 221 = settings > display > expanded radar
+                /*if (GetProfileSetting(221) == 1) // 221 = settings > display > expanded radar
                 {
                     SetBigmapActive(true, false);
                 }
@@ -988,7 +990,7 @@ namespace vMenuClient
                             radarSwitchTimer = GetGameTimer();
                         }
                     }
-                }
+                }*/
             }
             else
             {
